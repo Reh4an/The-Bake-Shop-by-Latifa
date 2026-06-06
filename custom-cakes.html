@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cake Designer | The Bake Shop by Latifa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="designer.css">
+</head>
+<body>
+    
+    <!-- Designer Layout -->
+    <div class="designer-container">
+        
+        <!-- LEFT: MULTI-STEP FORM -->
+        <div class="designer-form-area">
+            
+            <div class="designer-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+            </div>
+
+            <!-- STEP 1: Occasion -->
+            <div class="designer-step active" data-step="1">
+                <span class="accent-text" style="font-size:1.2rem;">Step 1 of 10</span>
+                <h3>What's the Occasion?</h3>
+                <p>Every great cake starts with a celebration. Select yours below.</p>
+                
+                <div class="grid-selector">
+                    <div class="image-card" data-group="occasion" data-value="birthday">
+                        <i class="ph ph-cake"></i>
+                        <span>Birthday</span>
+                    </div>
+                    <div class="image-card" data-group="occasion" data-value="wedding">
+                        <i class="ph ph-martini"></i>
+                        <span>Wedding</span>
+                    </div>
+                    <div class="image-card" data-group="occasion" data-value="anniversary">
+                        <i class="ph ph-heart"></i>
+                        <span>Anniversary</span>
+                    </div>
+                    <div class="image-card" data-group="occasion" data-value="baby shower">
+                        <i class="ph ph-baby"></i>
+                        <span>Baby Shower</span>
+                    </div>
+                    <div class="image-card" data-group="occasion" data-value="graduation">
+                        <i class="ph ph-graduation-cap"></i>
+                        <span>Graduation</span>
+                    </div>
+                    <div class="image-card" data-group="occasion" data-value="corporate">
+                        <i class="ph ph-briefcase"></i>
+                        <span>Corporate</span>
+                    </div>
+                    <div class="image-card" data-group="occasion" data-value="other">
+                        <i class="ph ph-plus"></i>
+                        <span>Other</span>
+                    </div>
+                </div>
+                
+                <div class="step-navigation" style="justify-content: flex-end;">
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 2: Cake Type -->
+            <div class="designer-step" data-step="2">
+                <span class="accent-text" style="font-size:1.2rem;">Step 2 of 10</span>
+                <h3>Choose a Cake Type</h3>
+                <p>Select the structure and foundational style of your cake.</p>
+                
+                <div class="grid-selector">
+                    <div class="image-card" data-group="type" data-value="Tier Cake">
+                        <i class="ph ph-layers-three"></i><span>Tier Cake</span>
+                    </div>
+                    <div class="image-card" data-group="type" data-value="Bento Cake">
+                        <i class="ph ph-package"></i><span>Bento Cake</span>
+                    </div>
+                    <div class="image-card" data-group="type" data-value="Cupcake Set">
+                        <i class="ph ph-muffin"></i><span>Cupcake Set</span>
+                    </div>
+                    <div class="image-card" data-group="type" data-value="Fondant Cake">
+                        <i class="ph ph-paint-roller"></i><span>Fondant Cake</span>
+                    </div>
+                    <div class="image-card" data-group="type" data-value="Heart Shape">
+                        <i class="ph ph-heart-straight"></i><span>Heart Shape</span>
+                    </div>
+                    <div class="image-card" data-group="type" data-value="Classic Round">
+                        <i class="ph ph-circle"></i><span>Classic Round</span>
+                    </div>
+                    <div class="image-card" data-group="type" data-value="other">
+                        <i class="ph ph-plus"></i><span>Other</span>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Flavors -->
+            <div class="designer-step" data-step="3">
+                <span class="accent-text" style="font-size:1.2rem;">Step 3 of 10</span>
+                <h3>Select Flavors</h3>
+                <p>What should the inside taste like? (Select multiple if needed)</p>
+                
+                <div class="pill-selector multi-select">
+                    <div class="pill" data-group="flavors" data-value="Chocolate">Chocolate</div>
+                    <div class="pill" data-group="flavors" data-value="Red Velvet">Red Velvet</div>
+                    <div class="pill" data-group="flavors" data-value="Vanilla">Vanilla</div>
+                    <div class="pill" data-group="flavors" data-value="Butterscotch">Butterscotch</div>
+                    <div class="pill" data-group="flavors" data-value="Ferrero Rocher">Ferrero Rocher</div>
+                    <div class="pill" data-group="flavors" data-value="Black Forest">Black Forest</div>
+                    <div class="pill" data-group="flavors" data-value="Blueberry">Blueberry</div>
+                    <div class="pill" data-group="flavors" data-value="Mango">Mango</div>
+                    <div class="pill" data-group="flavors" data-value="Coffee">Coffee</div>
+                    <div class="pill" data-group="flavors" data-value="Strawberry">Strawberry</div>
+                    <div class="pill" data-group="flavors" data-value="other">Other</div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 4: Frosting -->
+            <div class="designer-step" data-step="4">
+                <span class="accent-text" style="font-size:1.2rem;">Step 4 of 10</span>
+                <h3>Frosting & Cream</h3>
+                <p>The perfect exterior finish.</p>
+                
+                <div class="grid-selector multi-select">
+                    <div class="image-card" data-group="frosting" data-value="Buttercream">
+                        <i class="ph ph-waves"></i><span>Buttercream</span>
+                    </div>
+                    <div class="image-card" data-group="frosting" data-value="Ganache">
+                        <i class="ph ph-drop"></i><span>Ganache</span>
+                    </div>
+                    <div class="image-card" data-group="frosting" data-value="Whipped Cream">
+                        <i class="ph ph-cloud"></i><span>Whipped Cream</span>
+                    </div>
+                    <div class="image-card" data-group="frosting" data-value="Cream Cheese">
+                        <i class="ph ph-cheese"></i><span>Cream Cheese</span>
+                    </div>
+                    <div class="image-card" data-group="frosting" data-value="Fondant">
+                        <i class="ph ph-square"></i><span>Fondant</span>
+                    </div>
+                    <div class="image-card" data-group="frosting" data-value="other">
+                        <i class="ph ph-plus"></i><span>Other</span>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 5: Theme & Style -->
+            <div class="designer-step" data-step="5">
+                <span class="accent-text" style="font-size:1.2rem;">Step 5 of 10</span>
+                <h3>Theme & Aesthetic</h3>
+                <p>Select a style that matches your vibe.</p>
+                
+                <div class="pill-selector">
+                    <div class="pill" data-group="theme" data-value="elegant">Elegant</div>
+                    <div class="pill" data-group="theme" data-value="floral">Floral</div>
+                    <div class="pill" data-group="theme" data-value="luxury">Luxury</div>
+                    <div class="pill" data-group="theme" data-value="korean minimal">Korean Minimal</div>
+                    <div class="pill" data-group="theme" data-value="anime">Anime</div>
+                    <div class="pill" data-group="theme" data-value="cartoon">Cartoon</div>
+                    <div class="pill" data-group="theme" data-value="vintage">Vintage</div>
+                    <div class="pill" data-group="theme" data-value="modern">Modern</div>
+                    <div class="pill" data-group="theme" data-value="other">Other</div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 6: Colors -->
+            <div class="designer-step" data-step="6">
+                <span class="accent-text" style="font-size:1.2rem;">Step 6 of 10</span>
+                <h3>Color Palette</h3>
+                <p>Choose the dominant colors for your design.</p>
+                
+                <div class="color-picker">
+                    <div class="color-swatch" title="White & Gold" style="background: linear-gradient(135deg, #ffffff 50%, #d4af37 50%); border: 1px solid #ccc;"></div>
+                    <div class="color-swatch" title="Black & Gold" style="background: linear-gradient(135deg, #111111 50%, #d4af37 50%);"></div>
+                    <div class="color-swatch" title="Pastel Pink" style="background: #ffd1dc;"></div>
+                    <div class="color-swatch" title="Sage Green" style="background: #b2ac88;"></div>
+                    <div class="color-swatch" title="Chocolate Brown" style="background: #3e2723;"></div>
+                    <div class="color-swatch" title="Baby Blue" style="background: #a1c6ea;"></div>
+                    <div class="color-swatch" title="Lavender" style="background: #e6e6fa;"></div>
+                    <div class="color-swatch" title="Nude Beige" style="background: #e3dac9;"></div>
+                    <div class="color-swatch" title="Other" style="background: conic-gradient(red, yellow, green, cyan, blue, magenta, red);"></div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 7: Size & Servings -->
+            <div class="designer-step" data-step="7">
+                <span class="accent-text" style="font-size:1.2rem;">Step 7 of 10</span>
+                <h3>Size & Servings</h3>
+                <p>How many guests are you expecting?</p>
+                
+                <div class="pill-selector">
+                    <div class="pill" data-group="size" data-value="4-6 servings">4-6 servings (~1/2 kg)</div>
+                    <div class="pill" data-group="size" data-value="8-10 servings">8-10 servings (~1 kg)</div>
+                    <div class="pill" data-group="size" data-value="15-20 servings">15-20 servings (~1.5 kg)</div>
+                    <div class="pill" data-group="size" data-value="25+ servings">25+ servings (~2+ kg)</div>
+                    <div class="pill" data-group="size" data-value="other">Other</div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 8: Budget -->
+            <div class="designer-step" data-step="8">
+                <span class="accent-text" style="font-size:1.2rem;">Step 8 of 10</span>
+                <h3>Estimated Budget</h3>
+                <p>Set a budget to help us recommend the best design details.</p>
+                
+                <div class="budget-container">
+                    <div class="budget-value" id="budgetDisplay">₹5,000</div>
+                    <div style="display:flex; align-items:center; gap: 1rem;">
+                        <button type="button" id="decreaseBudget" class="budget-adjust-btn"><i class="ph ph-minus"></i></button>
+                        <input type="range" id="budgetSlider" min="500" max="20000" step="50" value="5000" style="flex:1;">
+                        <button type="button" id="increaseBudget" class="budget-adjust-btn"><i class="ph ph-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 9: Inspiration Upload & AI -->
+            <div class="designer-step" data-step="9">
+                <span class="accent-text" style="font-size:1.2rem;">Step 9 of 10</span>
+                <h3>Inspiration</h3>
+                <p>Upload a reference photo or use our AI to generate an idea.</p>
+                
+                <div class="upload-zone-luxury" id="uploadZone">
+                    <div class="upload-border"></div>
+                    <i class="ph ph-upload-simple upload-icon"></i>
+                    <h4 style="font-family:var(--font-heading);">Upload Inspiration Images</h4>
+                    <p style="margin-bottom:0.5rem; font-size:0.9rem; color:var(--text-muted);">Share Pinterest, Instagram, or reference cake designs.</p>
+                    <p style="margin-bottom:0; font-size:0.8rem; color:var(--accent-gold);">Drag & drop or click to browse (Max 5MB)</p>
+                    <input type="file" id="uploadInput" style="display:none" multiple accept="image/*">
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0;">
+                    <span style="background:var(--bg-color); padding: 0 1rem; color:var(--text-muted); position:relative; z-index:2;">OR</span>
+                    <hr style="margin-top:-10px; border-color:var(--border-color); position:relative; z-index:1;">
+                </div>
+
+                <div class="form-group">
+                    <label>AI Cake Idea Generator <span style="color:var(--accent-gold);">✨ Premium Feature</span></label>
+                    <input type="text" id="aiPrompt" class="form-control" placeholder="E.g. Luxury black and gold birthday cake for 18th birthday...">
+                </div>
+                <button id="aiGeneratorBtn" class="ai-generator-btn"><i class="ph ph-sparkle"></i> Generate Cake Idea</button>
+                
+                <div id="aiLoading" class="cute-loader" style="display:none;">
+                    <i class="ph ph-cake cute-loader-icon"></i>
+                    <p style="margin-top:0.5rem; color:var(--text-main); font-weight:500;">Baking your ideas into reality...</p>
+                </div>
+
+                <div id="aiResult" class="ai-result" style="text-align: center;">
+                    <h4 style="color:var(--accent-gold); margin-top:0;"><i class="ph ph-check-circle"></i> Idea Generated!</h4>
+                    <p style="font-size:0.9rem; margin-bottom:1rem;">Here is your custom AI-generated cake design.</p>
+                    <img id="aiGeneratedImage" src="" alt="AI Generated Cake" style="width: 100%; max-width: 300px; border-radius: var(--radius-md); margin-bottom: 1rem; box-shadow: var(--shadow-sm);">
+                    <br>
+                    <a id="aiDownloadBtn" href="#" download="my-cake-idea.jpg" class="btn-primary" style="display:inline-block; padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="ph ph-download-simple"></i> Download Image</a>
+                </div>
+
+                <div class="step-navigation">
+                    <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
+                    <button class="btn-primary next-step">Next Step <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 10: Final Notes -->
+            <div class="designer-step" data-step="10">
+                <div class="step-10-header" style="text-align:center; margin-bottom: 2.5rem;">
+                    <div class="completion-indicator">
+                        <div class="glow-dot"></div>
+                    </div>
+                    <span class="accent-text" style="font-size:1.1rem; display:block; margin-top:1rem; letter-spacing:2px; text-transform:uppercase;">Step 10</span>
+                    <h2 style="font-family:var(--font-heading); font-size: 2.5rem; margin-top:0.5rem; line-height: 1.2;">Your bespoke cake is almost ready.</h2>
+                </div>
+
+                <!-- 1. CAKE PREVIEW SECTION -->
+                <div class="cake-preview-card luxury-panel">
+                    <div class="preview-glow"></div>
+                    <div class="preview-content">
+                        <i class="ph ph-cake preview-icon"></i>
+                        <h4 style="margin:0; font-family:var(--font-heading); font-size:1.8rem; color:var(--text-main);">Estimated Final Look</h4>
+                        <p style="color:var(--text-muted); font-size:1rem; margin-top:0.5rem;">Based on your premium selections</p>
+                    </div>
+                </div>
+
+                <!-- ORDER SUMMARY (Luxury Pills) -->
+                <h3 style="margin-top:3rem; font-family:var(--font-heading); font-size:1.5rem; border-bottom:1px solid rgba(212,175,55,0.2); padding-bottom:0.5rem;">Design Summary</h3>
+                <div class="summary-card luxury-panel" id="summaryContainer" style="margin-top:1.5rem; padding: 2rem;">
+                    <!-- JS injects summary pills here -->
+                </div>
+
+                <!-- 2. DELIVERY / PICKUP SECTION -->
+                <h3 style="margin-top:3rem; font-family:var(--font-heading); font-size:1.5rem; border-bottom:1px solid rgba(212,175,55,0.2); padding-bottom:0.5rem;">Fulfillment Details</h3>
+                <div class="delivery-section luxury-panel" style="margin-top:1.5rem; padding: 2rem;">
+                    <div class="segmented-toggle">
+                        <input type="radio" id="pickupToggle" name="fulfillment" value="pickup" checked>
+                        <label for="pickupToggle"><i class="ph ph-storefront"></i> Store Pickup</label>
+                        
+                        <input type="radio" id="deliveryToggle" name="fulfillment" value="delivery">
+                        <label for="deliveryToggle"><i class="ph ph-truck"></i> Delivery</label>
+                    </div>
+                    
+                    <div class="delivery-fields" style="margin-top:2rem;">
+                        <div class="form-row" style="display:flex; gap:1.5rem; flex-wrap:wrap;">
+                            <div class="form-group" style="flex:1; min-width:200px;">
+                                <label style="color:var(--accent-gold);">Date</label>
+                                <input type="date" id="fulfillDate" class="form-control premium-input">
+                            </div>
+                            <div class="form-group" style="flex:1; min-width:200px;">
+                                <label style="color:var(--accent-gold);">Time</label>
+                                <input type="text" id="fulfillTime" class="form-control premium-input" placeholder="E.g. 10:00 AM or 03:00 PM">
+                            </div>
+                        </div>
+                        <div class="form-group delivery-address-group" style="display:none; margin-top:1.5rem;">
+                            <label style="color:var(--accent-gold);">Delivery Address</label>
+                            <textarea id="deliveryAddress" class="form-control premium-input" rows="2" placeholder="Enter your full delivery address..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. PRICING DETAILS REMOVED -->
+
+                <!-- FINAL FORM (Message, Contact, Confirmation) -->
+                <form id="finalForm" style="margin-top:3rem;">
+                    <div class="form-group luxury-form-group">
+                        <label>Message on Cake</label>
+                        <input type="text" id="cakeMessage" class="form-control premium-input" placeholder="E.g. Congratulations Sarah!" maxlength="30">
+                        <div style="text-align:right; font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem;"><span id="msgCount">0</span>/30 characters</div>
+                    </div>
+
+                    <div class="form-group luxury-form-group" style="margin-top:2rem;">
+                        <label>Your Name / Contact Info</label>
+                        <input type="text" id="finalName" class="form-control premium-input" required placeholder="Name, Phone Number">
+                    </div>
+                    
+                    <div class="form-group luxury-form-group" style="margin-top:2rem;">
+                        <label>Special Instructions / Allergies</label>
+                        <textarea id="finalNotes" class="form-control premium-input" rows="3" placeholder="E.g. Eggless, nut allergy..."></textarea>
+                    </div>
+
+                    <!-- 5. CONFIRMATION CHECKBOX -->
+                    <div class="confirmation-group" style="margin-top:2.5rem; background:rgba(212,175,55,0.05); padding:1.5rem; border-radius:var(--radius-md); border:1px solid rgba(212,175,55,0.2);">
+                        <label class="premium-checkbox-label">
+                            <input type="checkbox" id="orderConfirm" required>
+                            <span class="checkmark"></span>
+                            <span class="check-text" style="font-weight:500;">I confirm that all order details are correct.</span>
+                        </label>
+                    </div>
+
+                    <!-- 10. UPGRADE CTA BUTTON -->
+                    <div class="step-navigation" style="border:none; padding:0; margin-top:3rem; display:flex; justify-content:space-between; align-items:center;">
+                        <button type="button" class="btn-secondary prev-step" style="border:none; background:transparent;"><i class="ph ph-arrow-left"></i> Back</button>
+                        <button type="submit" class="btn-luxury-submit">
+                            <span class="btn-text">Reserve Custom Order</span>
+                            <i class="ph ph-sparkle" style="margin-left:0.5rem;"></i>
+                            <div class="btn-shimmer"></div>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- 4. WHAT HAPPENS NEXT SECTION -->
+                <div class="what-happens-next" style="margin-top:5rem; padding:3rem 2rem; background:var(--surface-color); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm);">
+                    <h3 style="font-family:var(--font-heading); text-align:center; margin-bottom:3rem; font-size:1.8rem;">What Happens Next?</h3>
+                    <div class="vertical-timeline">
+                        <div class="timeline-step">
+                            <div class="timeline-icon"><i class="ph ph-magnifying-glass"></i></div>
+                            <div class="timeline-content">
+                                <h5>1. Review</h5>
+                                <p>Our chefs review your bespoke design.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-icon"><i class="ph ph-phone-call"></i></div>
+                            <div class="timeline-content">
+                                <h5>2. Confirmation</h5>
+                                <p>We contact you to confirm details & payment.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-icon"><i class="ph ph-magic-wand"></i></div>
+                            <div class="timeline-content">
+                                <h5>3. Preparation</h5>
+                                <p>Your cake enters artisanal preparation.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="timeline-icon"><i class="ph ph-gift"></i></div>
+                            <div class="timeline-content">
+                                <h5>4. Fulfillment</h5>
+                                <p>Fresh delivery or store pickup!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT: DYNAMIC PREVIEW -->
+        <div class="designer-preview-area">
+            <h2 style="font-family: var(--font-heading); margin-bottom: 2rem; font-size:1.75rem;">Live Inspiration Board</h2>
+            
+            <div class="preview-masonry" id="previewMasonry" style="display:flex; justify-content:center; align-items:center; height:100%;">
+                <div style="text-align: center; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 4rem 2rem; border-radius: var(--radius-lg); border: 1px solid rgba(212, 175, 55, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 400px; animation: fadeIn 0.8s ease;">
+                    <i class="ph ph-sparkle" style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 1rem;"></i>
+                    <h3 style="font-family: var(--font-heading); color: var(--text-dark); margin-bottom: 1rem;">Awaiting Your Vision</h3>
+                    <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.6; font-style: italic;">
+                        "Your bespoke cake design will beautifully materialize here after you make your selections.<br><br>Proceed to <strong>Step 9</strong> to reveal your live AI-generated inspiration."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 12. TRUST / QUALITY SECTION -->
+    <section class="trust-quality-section" style="padding: 4rem 5%; background: var(--surface-color); border-top: 1px solid rgba(212,175,55,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+            <div class="trust-card">
+                <i class="ph ph-oven" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;"></i>
+                <h4 style="font-family:var(--font-heading);">Freshly Baked</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Prepared daily upon order</p>
+            </div>
+            <div class="trust-card">
+                <i class="ph ph-star" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;"></i>
+                <h4 style="font-family:var(--font-heading);">Premium Quality</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Finest ingredients sourced</p>
+            </div>
+            <div class="trust-card">
+                <i class="ph ph-hand-heart" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;"></i>
+                <h4 style="font-family:var(--font-heading);">Handcrafted</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Bespoke artisanal design</p>
+            </div>
+            <div class="trust-card">
+                <i class="ph ph-sparkle" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;"></i>
+                <h4 style="font-family:var(--font-heading);">Hygienic</h4>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Immaculate preparation</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Delivery & Pickup Information -->
+    <section class="delivery-pickup-info" style="padding: 6rem 5%; background: var(--bg-dark); border-top: 1px solid rgba(212,175,55,0.1);">
+        <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 2.5rem; margin-bottom: 2rem;">Delivery & Pickup Information</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem;">We take the utmost care to ensure your bespoke cakes arrive safely and beautifully. Review our delivery guidelines below.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; text-align: left; background: rgba(255,255,255,0.02); padding: 3rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <div>
+                    <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; font-size: 1.5rem;"><i class="ph ph-truck"></i> Delivery Service</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">We proudly serve Panjim, Merces, Santa Cruz, Taleigao, Porvorim, Bambolim, and Old Goa.</p>
+                    <p style="color: var(--text-muted); line-height: 1.6;">Delivery fees are calculated based on distance from our bakery in Merces. To ensure safe transport, all multi-tier cakes are delivered personally by our team.</p>
+                </div>
+                <div>
+                    <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; font-size: 1.5rem;"><i class="ph ph-storefront"></i> Store Pickup</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">Available at <strong>The Shah Harmony Co op Housing Society Ltd, Moloca Merces</strong>.</p>
+                    <p style="color: var(--text-muted); line-height: 1.6;">Please bring a flat-bottom vehicle with AC. Pickups must be scheduled during our business hours (Mon-Sat: 9am - 6pm).</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <p style="color: #fff; font-size: 1.1rem; margin-bottom: 1rem;"><strong>Order Timeline:</strong> Please provide at least 3-5 days notice for custom celebration cakes.</p>
+                <a href="https://wa.me/919689327789" target="_blank" class="btn-whatsapp" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #fff; padding: 0.8rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: 600;"><i class="ph ph-whatsapp-logo"></i> Consult via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="designer.js"></script>
+
+    
+    <footer>
+        <div style="text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem; color: var(--text-muted);">
+            <p>&copy; 2026 The Bake Shop by Latifa. Handcrafted in Goa.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

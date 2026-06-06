@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bake Shop by Latifa | Taste The Love In Every Bite</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="accent-text">Welcome</span>
+            <h1>Handcrafted. Organic. Rustic.</h1>
+            <p>Experience the warmth of artisanal baking made with love from our oven to your home. Taste the love in
+                every bite.</p>
+            <div class="hero-actions">
+                <a href="menu.html" class="btn-primary">Order Now <i class="ph ph-arrow-right"></i></a>
+                <a href="#categories" class="btn-secondary">Explore Menu</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-slider auto-slider" id="heroSlider">
+                <img src="assets/pro cake photo.jpeg" class="slide active" alt="Pro Cake">
+                <img src="assets/chocolate cake with rose.jpeg" class="slide" alt="Chocolate Cake with Rose">
+                <img src="assets/pista cheesecake.jpg" class="slide" alt="Pista Cheesecake">
+                <img src="assets/bento cake.jpeg" class="slide" alt="Bento Cake">
+                <img src="assets/cookies.jpeg" class="slide" alt="Cookies">
+                <img src="assets/chocolate cake with rose.jpeg" class="slide" alt="Chocolate Ganache Cake">
+            </div>
+            <div class="hero-badge">
+                <i class="ph ph-plant"></i>
+                <div class="hero-badge-text">
+                    100% Organic<br>Ingredients
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories Section -->
+    <section id="categories">
+        <div class="section-header">
+            <span class="accent-text">Discover</span>
+            <h2>Featured Categories</h2>
+        </div>
+        <div class="category-grid">
+            <!-- Category Card 1 -->
+            <div class="category-card">
+                <div class="category-image has-overlay manual-slider" id="seasonalSlider">
+                    <img src="assets/mango cake.jpeg" class="slide active" alt="Mango Cake" data-name="Mango Cake">
+                    <img src="assets/pineapple cake.jpeg" class="slide" alt="Pineapple Cake" data-name="Pineapple Cake">
+                    <div class="image-overlay">
+                        <span id="seasonalSliderName">Mango Cake</span>
+                    </div>
+                    <button class="slider-btn prev-btn" onclick="nextSlide('seasonalSlider', -1)">&#10094;</button>
+                    <button class="slider-btn next-btn" onclick="nextSlide('seasonalSlider', 1)">&#10095;</button>
+                </div>
+                <h3>Seasonal Favorites</h3>
+                <p>Enjoy our limited-time seasonal delights, baked fresh daily.</p>
+                <a href="javascript:void(0)" onclick="navigateToMenu('Creamy Cakes', 'img-44')" class="btn-text">Shop Now <i
+                        class="ph ph-arrow-right"></i></a>
+            </div>
+            <!-- Category Card 2 -->
+            <div class="category-card">
+                <div class="category-image auto-slider">
+                    <img src="assets/health bake 1.jpeg" class="slide active" alt="Healthy Bake 1">
+                    <img src="assets/health bake 2.jpeg" class="slide" alt="Healthy Bake 2">
+                    <img src="assets/health bake 3.jpeg" class="slide" alt="Healthy Bake 3">
+                    <img src="assets/healt bake 4.jpeg" class="slide" alt="Healthy Bake 4">
+                </div>
+                <h3>Healthy Bakes</h3>
+                <p>Sugar-free, vegan, and gluten-free options without compromising on taste.</p>
+                <a href="javascript:void(0)" onclick="navigateToMenu('Healthy Cakes')" class="btn-text">Shop Now <i
+                        class="ph ph-arrow-right"></i></a>
+            </div>
+            <!-- Category Card 3 -->
+            <div class="category-card">
+                <div class="category-image auto-slider">
+                    <img src="assets/customized cake 1.jpeg" class="slide active reveal-zoom" alt="Custom Cake 1">
+                    <img src="assets/customized cake 2.jpeg" class="slide reveal-zoom" alt="Custom Cake 2">
+                    <img src="assets/customized cake 3.jpeg" class="slide reveal-zoom" alt="Custom Cake 3">
+                    <img src="assets/customized cake 4.jpg" class="slide reveal-zoom" alt="Custom Cake 4">
+                </div>
+                <h3>Custom Cakes</h3>
+                <p>Beautiful bespoke cakes for weddings, birthdays, and special events.</p>
+                <a href="custom-cakes.html" class="btn-text">Order Custom <i class="ph ph-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthy Bakes Highlight -->
+    <section id="healthy">
+        <div class="healthy-showcase">
+            <div class="healthy-image">
+                <img src="assets/super seed health cake.jpeg" alt="Vegan and Gluten-Free Bakes">
+            </div>
+            <div class="healthy-content">
+                <span class="accent-text">Guilt-Free</span>
+                <h2>Wholesome & Healthy</h2>
+                <p>We believe everyone deserves a treat. That's why we've perfected our recipes to offer delicious
+                    alternatives for specific dietary needs. From superseed date walnut cakes to ragi oats cookies,
+                    every bite is crafted with organic, preservative-free ingredients.</p>
+                <div class="healthy-tags">
+                    <span class="tag"><i class="ph ph-leaf"></i> Vegan</span>
+                    <span class="tag"><i class="ph ph-check-circle"></i> Gluten-Free</span>
+                    <span class="tag"><i class="ph ph-drop"></i> Sugar-Free</span>
+                    <span class="tag"><i class="ph ph-heart"></i> Handmade</span>
+                </div>
+                <a href="javascript:void(0)" onclick="navigateToMenu('Healthy Cakes')" class="btn-primary">View
+                    Selection</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    
+    <!-- Visit Us Section -->
+    <section class="section-visit-us dark-section">
+        <div class="container visit-split fade-up">
+            <div class="contact-info">
+                <span class="section-label">Visit Us</span>
+                <h2 class="section-title text-light">We'd Love to Hear From You</h2>
+                <p style="color:var(--text-muted); font-size:1.1rem; line-height:1.6; margin-bottom:1rem;">Whether you're picking up a daily treat or planning a grand celebration, our doors are always open for a consultation.</p>
+                
+                <div class="contact-item">
+                    <i class="ph ph-map-pin contact-icon"></i>
+                    <div class="contact-details">
+                        <h4>Bakery Location</h4>
+                        <p>The Shah Harmony Co op Housing Society Ltd<br>Moloca Merces, Santa Cruz, Goa 403005</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-clock contact-icon"></i>
+                    <div class="contact-details">
+                        <h4>Business Hours</h4>
+                        <p>Mon-Sat: 9:00 AM - 6:00 PM<br>Sunday: Closed (Available for pre-ordered pickups)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="ph ph-phone contact-icon"></i>
+                    <div class="contact-details">
+                        <h4>Contact Us</h4>
+                        <p>Phone: +91 9689327789<br>Email: hello@thebakeshopbylatifa.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/919689327789" class="btn-whatsapp" target="_blank"><i class="ph ph-whatsapp-logo"></i> WhatsApp Us</a>
+                    <a href="tel:+919689327789" class="btn-outline-gold" style="border-color: rgba(255,255,255,0.2); color: #fff;"><i class="ph ph-phone-call"></i> Call Now</a>
+                </div>
+            </div>
+            
+            <div class="map-wrapper fade-in">
+                <iframe src="https://maps.google.com/maps?q=The+Bake+Shop+by+Latifa,+Moloca+Merces,+Santa+Cruz,+Goa+403005&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        
+        
+        </div>
+    </section>
+
+    
+    <footer>
+        <div style="text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem; color: var(--text-muted);">
+            <p>&copy; 2026 The Bake Shop by Latifa. Handcrafted in Goa.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

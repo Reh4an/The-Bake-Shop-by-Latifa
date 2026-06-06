@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | The Bake Shop by Latifa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menu Section -->
+    <section id="menu" class="subpage-content">
+        <div class="section-header">
+            <span class="accent-text">Our Menu</span>
+            <h2>Freshly Baked Delights</h2>
+        </div>
+        
+        <div class="menu-controls">
+            <div class="menu-filters" id="menuFilters">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Healthy Cakes">Healthy Cakes</button>
+                <button class="filter-btn" data-filter="Creamy Cakes">Creamy Cakes</button>
+                <button class="filter-btn" data-filter="Tea Cakes">Tea Cakes</button>
+                <button class="filter-btn" data-filter="Cupcakes">Cupcakes</button>
+                <button class="filter-btn" data-filter="Cheesecakes">Cheesecakes</button>
+                <button class="filter-btn" data-filter="Cookies">Cookies</button>
+                <button class="filter-btn" data-filter="Brownies & Mousse">Brownies & Mousse</button>
+            </div>
+            <div class="menu-search">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search menu...">
+            </div>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <!-- Menu items injected via JS -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
