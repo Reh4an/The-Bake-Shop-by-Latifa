@@ -12,19 +12,18 @@
 
 @media (min-width: 992px) {
     .designer-container {
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         margin-top: 80px;
-        height: calc(100vh - 80px);
-        min-height: auto;
-        overflow: hidden;
+        min-height: calc(100vh - 80px);
     }
 }
 
 /* Left Area - Form */
 .designer-form-area {
-    flex: 1;
+    width: 100%;
     padding: 2rem;
-    overflow-y: auto;
+    overflow-y: visible;
     background-color: var(--surface-color);
     position: relative;
 }
@@ -32,26 +31,11 @@
 @media (min-width: 992px) {
     .designer-form-area {
         padding: 4rem;
-        flex: 1.5;
-        max-width: 700px;
-        box-shadow: 5px 0 20px rgba(0,0,0,0.05);
+        max-width: 800px;
+        margin: 2rem auto;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+        border-radius: var(--radius-lg);
         z-index: 10;
-    }
-}
-
-/* Right Area - Preview */
-.designer-preview-area {
-    flex: 1;
-    background-color: var(--accent-light);
-    padding: 2rem;
-    overflow-y: auto;
-    position: relative;
-    display: none;
-}
-
-@media (min-width: 992px) {
-    .designer-preview-area {
-        display: block;
     }
 }
 

@@ -82,7 +82,7 @@
                 <h3>Choose a Cake Type</h3>
                 <p>Select the structure and foundational style of your cake.</p>
                 
-                <div class="grid-selector">
+                <div class="grid-selector multi-select">
                     <div class="image-card" data-group="type" data-value="Tier Cake">
                         <i class="ph ph-layers-three"></i><span>Tier Cake</span>
                     </div>
@@ -177,7 +177,7 @@
                 <h3>Theme & Aesthetic</h3>
                 <p>Select a style that matches your vibe.</p>
                 
-                <div class="pill-selector">
+                <div class="pill-selector multi-select">
                     <div class="pill" data-group="theme" data-value="elegant">Elegant</div>
                     <div class="pill" data-group="theme" data-value="floral">Floral</div>
                     <div class="pill" data-group="theme" data-value="luxury">Luxury</div>
@@ -210,7 +210,18 @@
                     <div class="color-swatch" title="Baby Blue" style="background: #a1c6ea;"></div>
                     <div class="color-swatch" title="Lavender" style="background: #e6e6fa;"></div>
                     <div class="color-swatch" title="Nude Beige" style="background: #e3dac9;"></div>
-                    <div class="color-swatch" title="Other" style="background: conic-gradient(red, yellow, green, cyan, blue, magenta, red);"></div>
+                    <div class="color-swatch" id="customColorSwatch" title="Custom Color" style="background: conic-gradient(red, yellow, green, cyan, blue, magenta, red); display: flex; justify-content: center; align-items: center;">
+                        <i class="ph ph-palette" style="pointer-events: none; color: white; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));"></i>
+                    </div>
+                    <input type="color" id="customColorInput" style="visibility: hidden; position: absolute;">
+                </div>
+                
+                <div id="customColorConfirmUI" style="display: none; align-items: center; justify-content: space-between; margin-top: 1.5rem; padding: 1rem; background: rgba(212,175,55,0.05); border-radius: var(--radius-md); border: 1px solid rgba(212,175,55,0.2); animation: fadeIn 0.3s ease;">
+                    <div>
+                        <span style="font-size: 0.9rem; color: var(--text-muted);">Selected Hex:</span>
+                        <strong id="customHexDisplay" style="margin-left: 0.5rem; font-family: monospace; font-size: 1.1rem; color: var(--text-main);">#000000</strong>
+                    </div>
+                    <button id="customColorOkBtn" type="button" class="btn-primary" style="padding: 0.4rem 1.2rem; font-size: 0.9rem; min-width: auto;">Okay <i class="ph ph-check"></i></button>
                 </div>
 
                 <div class="step-navigation">
@@ -264,7 +275,7 @@
             <div class="designer-step" data-step="9">
                 <span class="accent-text" style="font-size:1.2rem;">Step 9 of 10</span>
                 <h3>Inspiration</h3>
-                <p>Upload a reference photo or use our AI to generate an idea.</p>
+                <p>Upload a reference photo.</p>
                 
                 <div class="upload-zone-luxury" id="uploadZone">
                     <div class="upload-border"></div>
@@ -275,29 +286,6 @@
                     <input type="file" id="uploadInput" style="display:none" multiple accept="image/*">
                 </div>
 
-                <div style="text-align: center; margin: 2rem 0;">
-                    <span style="background:var(--bg-color); padding: 0 1rem; color:var(--text-muted); position:relative; z-index:2;">OR</span>
-                    <hr style="margin-top:-10px; border-color:var(--border-color); position:relative; z-index:1;">
-                </div>
-
-                <div class="form-group">
-                    <label>AI Cake Idea Generator <span style="color:var(--accent-gold);">✨ Premium Feature</span></label>
-                    <input type="text" id="aiPrompt" class="form-control" placeholder="E.g. Luxury black and gold birthday cake for 18th birthday...">
-                </div>
-                <button id="aiGeneratorBtn" class="ai-generator-btn"><i class="ph ph-sparkle"></i> Generate Cake Idea</button>
-                
-                <div id="aiLoading" class="cute-loader" style="display:none;">
-                    <i class="ph ph-cake cute-loader-icon"></i>
-                    <p style="margin-top:0.5rem; color:var(--text-main); font-weight:500;">Baking your ideas into reality...</p>
-                </div>
-
-                <div id="aiResult" class="ai-result" style="text-align: center;">
-                    <h4 style="color:var(--accent-gold); margin-top:0;"><i class="ph ph-check-circle"></i> Idea Generated!</h4>
-                    <p style="font-size:0.9rem; margin-bottom:1rem;">Here is your custom AI-generated cake design.</p>
-                    <img id="aiGeneratedImage" src="" alt="AI Generated Cake" style="width: 100%; max-width: 300px; border-radius: var(--radius-md); margin-bottom: 1rem; box-shadow: var(--shadow-sm);">
-                    <br>
-                    <a id="aiDownloadBtn" href="#" download="my-cake-idea.jpg" class="btn-primary" style="display:inline-block; padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="ph ph-download-simple"></i> Download Image</a>
-                </div>
 
                 <div class="step-navigation">
                     <button class="btn-secondary prev-step"><i class="ph ph-arrow-left"></i> Back</button>
@@ -439,20 +427,6 @@
 
         </div>
 
-        <!-- RIGHT: DYNAMIC PREVIEW -->
-        <div class="designer-preview-area">
-            <h2 style="font-family: var(--font-heading); margin-bottom: 2rem; font-size:1.75rem;">Live Inspiration Board</h2>
-            
-            <div class="preview-masonry" id="previewMasonry" style="display:flex; justify-content:center; align-items:center; height:100%;">
-                <div style="text-align: center; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 4rem 2rem; border-radius: var(--radius-lg); border: 1px solid rgba(212, 175, 55, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 400px; animation: fadeIn 0.8s ease;">
-                    <i class="ph ph-sparkle" style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 1rem;"></i>
-                    <h3 style="font-family: var(--font-heading); color: var(--text-dark); margin-bottom: 1rem;">Awaiting Your Vision</h3>
-                    <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.6; font-style: italic;">
-                        "Your bespoke cake design will beautifully materialize here after you make your selections.<br><br>Proceed to <strong>Step 9</strong> to reveal your live AI-generated inspiration."
-                    </p>
-                </div>
-            </div>
-        </div>
 
     </div>
 
@@ -510,7 +484,7 @@
     </section>
 
     <script src="script.js"></script>
-    <script src="designer.js"></script>
+    <script src="designer.js?v=8"></script>
 
     
     <footer>

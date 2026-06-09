@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const designerState = {
         occasion: '',
-        type: '',
+        type: [],
         flavors: [],
         frosting: [],
-        theme: '',
+        theme: [],
         colors: [],
         size: '',
         budget: 5000,
@@ -296,6 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Color Pickers
     document.querySelectorAll('.color-swatch').forEach(swatch => {
+        if (swatch.id === 'customColorSwatch') return;
+        
         swatch.addEventListener('click', function() {
             this.classList.toggle('selected');
             const color = this.getAttribute('title');
@@ -306,6 +308,52 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    const customColorSwatch = document.getElementById('customColorSwatch');
+    const customColorInput = document.getElementById('customColorInput');
+    const customColorConfirmUI = document.getElementById('customColorConfirmUI');
+    const customHexDisplay = document.getElementById('customHexDisplay');
+    const customColorOkBtn = document.getElementById('customColorOkBtn');
+    
+    if (customColorSwatch && customColorInput) {
+        customColorSwatch.addEventListener('click', function() {
+            if (this.classList.contains('selected')) {
+                this.classList.remove('selected');
+                this.style.background = 'conic-gradient(red, yellow, green, cyan, blue, magenta, red)';
+                designerState.colors = designerState.colors.filter(c => !c.startsWith('Custom:'));
+                this.setAttribute('title', 'Custom Color');
+                if(customColorConfirmUI) customColorConfirmUI.style.display = 'none';
+            } else {
+                customColorInput.click();
+            }
+        });
+
+        customColorInput.addEventListener('change', function(e) {
+            const hex = e.target.value;
+            customColorSwatch.style.background = hex;
+            customColorSwatch.setAttribute('title', `Custom: ${hex}`);
+            customColorSwatch.classList.add('selected');
+            designerState.colors = designerState.colors.filter(c => !c.startsWith('Custom:'));
+            designerState.colors.push(`Custom: ${hex}`);
+            
+            if(customColorConfirmUI && customHexDisplay) {
+                customColorConfirmUI.style.display = 'flex';
+                customHexDisplay.textContent = hex.toUpperCase();
+            }
+        });
+        
+        customColorInput.addEventListener('input', function(e) {
+            const hex = e.target.value;
+            customColorSwatch.style.background = hex;
+            if(customHexDisplay) customHexDisplay.textContent = hex.toUpperCase();
+        });
+        
+        if(customColorOkBtn) {
+            customColorOkBtn.addEventListener('click', () => {
+                customColorConfirmUI.style.display = 'none';
+            });
+        }
+    }
 
     // Budget Slider & Adjusters
     const decreaseBudget = document.getElementById('decreaseBudget');
@@ -624,12 +672,18 @@ document.addEventListener('DOMContentLoaded', () => {
             designerState.name = document.getElementById('finalName').value;
             designerState.message = document.getElementById('cakeMessage') ? document.getElementById('cakeMessage').value : '';
             
+            const isDelivery = document.getElementById('deliveryToggle') && document.getElementById('deliveryToggle').checked;
+            designerState.fulfillmentMethod = isDelivery ? 'Delivery' : 'Store Pickup';
+            designerState.fulfillDate = document.getElementById('fulfillDate') ? document.getElementById('fulfillDate').value : '';
+            designerState.fulfillTime = document.getElementById('fulfillTime') ? document.getElementById('fulfillTime').value : '';
+            designerState.deliveryAddress = document.getElementById('deliveryAddress') ? document.getElementById('deliveryAddress').value : '';
+            
             const btn = finalForm.querySelector('.btn-luxury-submit');
             const btnText = btn.querySelector('.btn-text');
             btnText.innerHTML = '<i class="ph ph-spinner ph-spin"></i> Reserving...';
             
             setTimeout(() => {
-                btnText.innerHTML = '<i class="ph ph-check-circle"></i> Reservation Confirmed';
+                btnText.innerHTML = '<i class="ph ph-check-circle"></i> Redirecting to WhatsApp...';
                 btn.style.background = 'linear-gradient(135deg, #1f4024 0%, #2e7d32 100%)';
                 btn.style.borderColor = '#2e7d32';
                 btn.style.boxShadow = '0 0 25px rgba(46, 125, 50, 0.4)';
@@ -638,7 +692,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (typeof gsap !== 'undefined') {
                     gsap.to(btn, { scale: 1.05, duration: 0.2, yoyo: true, repeat: 1 });
                 }
-            }, 2000);
+
+                // Construct WhatsApp message
+                let msg = `Hello The Bake Shop! I would like to reserve a custom cake.\n\n`;
+                msg += `*Name/Contact:* ${designerState.name}\n`;
+                msg += `*Occasion:* ${designerState.occasion || 'Not specified'}\n`;
+                if (designerState.type && designerState.type.length) msg += `*Type:* ${designerState.type.join(', ')}\n`;
+                if (designerState.theme && designerState.theme.length) msg += `*Theme:* ${designerState.theme.join(', ')}\n`;
+                if (designerState.colors.length) msg += `*Colors:* ${designerState.colors.join(', ')}\n`;
+                if (designerState.flavors.length) msg += `*Flavors:* ${designerState.flavors.join(', ')}\n`;
+                if (designerState.frosting.length) msg += `*Frosting:* ${designerState.frosting.join(', ')}\n`;
+                if (designerState.size) msg += `*Size:* ${designerState.size}\n`;
+                if (designerState.budget) msg += `*Estimated Budget:* ₹${designerState.budget}\n`;
+                if (designerState.fulfillmentMethod) {
+                    msg += `*Fulfillment Method:* ${designerState.fulfillmentMethod}\n`;
+                    if (designerState.fulfillDate) msg += `*Date:* ${designerState.fulfillDate}\n`;
+                    if (designerState.fulfillTime) msg += `*Time:* ${designerState.fulfillTime}\n`;
+                    if (designerState.fulfillmentMethod === 'Delivery' && designerState.deliveryAddress) {
+                        msg += `*Delivery Address:* ${designerState.deliveryAddress}\n`;
+                    }
+                }
+                if (designerState.message) msg += `*Message on Cake:* ${designerState.message}\n`;
+                if (designerState.notes) msg += `*Notes/Allergies:* ${designerState.notes}\n`;
+                
+                if (designerState.inspirationImages && designerState.inspirationImages.length > 0) {
+                    msg += `\n*[IMPORTANT: I have an inspiration photo! I will attach it to this chat now.]*\n`;
+                }
+                
+                // Open WhatsApp
+                window.open(`https://wa.me/919689327789?text=${encodeURIComponent(msg)}`, '_blank');
+            }, 1500);
         });
     }
 
