@@ -1,7 +1,7 @@
 // --- Menu Data ---
 const menuItems = [
     // Healthy Cakes
-    { id: 1, name: "Rustic Wheat Loaf", category: "Healthy Cakes", desc: "A wholesome, fiber-rich loaf baked to perfection.", weight: "1/2 kg", price: 400, image: "assets/Plain Wheat Cake.png", tags: ["Vegan Friendly"],
+    { id: 1, name: "Rustic Wheat Loaf", category: "Healthy Cakes", desc: "A wholesome, fiber-rich loaf baked to perfection.", weight: "1/2 kg", price: 400, image: "assets/Plain Wheat Cake.png", tags: [],
       hasOptions: true,
       options: [
           { name: "1/2 kg", price: 400 },
@@ -69,7 +69,7 @@ const menuItems = [
     
     // Cupcake Delights
     { id: 19, name: "Buttercream Bliss Cupcake", category: "Cupcakes", desc: "Soft sponge topped with silky smooth buttercream.", weight: "MOQ 12 pcs", price: 30, image: "assets/Buttercream Cupcake.png", tags: ["Signature"] },
-    { id: 20, name: "Vanilla Choco Chip Cupcake", category: "Cupcakes", desc: "Classic vanilla studded with Belgian choco chips.", weight: "MOQ 12 pcs", price: 30, image: "assets/vanilla_choco_bare.png", tags: ["Bestseller"] },
+    { id: 20, name: "Vanilla Choco Chip Cupcake", category: "Cupcakes", desc: "Classic vanilla studded with rich choco chips.", weight: "MOQ 12 pcs", price: 30, image: "assets/vanilla_choco_bare.png", tags: ["Bestseller"] },
     { id: 21, name: "Pineapple Paradise Cupcake", category: "Cupcakes", desc: "A fluffy pineapple-infused cupcake finished with smooth whipped cream.", weight: "MOQ 12 pcs", price: 30, image: "assets/Pineapple Cupcake.png", tags: ["Fresh Fruit"] },
     { id: 22, name: "Butterscotch Dream Cupcake", category: "Cupcakes", desc: "Classic butterscotch indulgence in every bite.", weight: "MOQ 12 pcs", price: 30, image: "assets/Butterscotch Cupcake.png", tags: ["Bestseller"] },
     { id: 23, name: "Red Velvet Buttercream Cupcake", category: "Cupcakes", desc: "Classic red velvet cupcake topped with smooth, velvety buttercream frosting.", weight: "MOQ 12 pcs", price: 45, image: "assets/Red Velvet Cupcake (buttercream).png", tags: ["Signature"] },
@@ -125,10 +125,10 @@ const menuItems = [
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 600 }, { name: "1kg", price: 1100 }] },
     { id: 40, name: "Blueberry Velvet Dream", category: "Creamy Cakes", desc: "Beautifully decorated cake infused with blueberry essence and whipped cream.", weight: "1/2 kg", price: 700, image: "assets/Blue berry whipped cream cake.jpeg", tags: ["Fresh Fruit"],
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 700 }, { name: "1kg", price: 1300 }] },
-    { id: 41, name: "Strawberry Bloom Cake", category: "Creamy Cakes", desc: "A pink-hued strawberry cake kissed with soft whipped cream.", weight: "1/2 kg", price: 600, image: "assets/Strawberry whipped cream cake.jpeg", tags: ["Fresh Fruit"],
-      hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 600 }, { name: "1kg", price: 1100 }] },
     { id: 43, name: "Royal Rasmalai Fusion", category: "Creamy Cakes", desc: "A rich fusion of indian rasmalai, whipped cream and cake.", weight: "1/2 kg", price: 800, image: "assets/rasmalai cake.jpeg", tags: ["Signature", "Premium"],
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 800 }, { name: "1kg", price: 1500 }] },
+    { id: 41, name: "Strawberry Bloom Cake", category: "Creamy Cakes", desc: "A pink-hued strawberry cake kissed with soft whipped cream.", weight: "1/2 kg", price: 600, image: "assets/Strawberry whipped cream cake.jpeg", tags: ["Fresh Fruit"],
+      hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 600 }, { name: "1kg", price: 1100 }] },
     { id: 42, name: "Pineapple Paradise", category: "Creamy Cakes", desc: "Tropical goodness loaded with fresh pineapple chunks and smooth whipped cream.", weight: "1/2 kg", price: 650, image: "assets/pineapple cake.jpeg", tags: ["Fresh Fruit", "Signature"],
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 650 }, { name: "1kg", price: 1200 }] },
     { id: 44, name: "Mango Delight", category: "Creamy Cakes", desc: "A rich fusion of classic Indian mangoes, whipped cream and cake.", weight: "1/2 kg", price: 800, image: "assets/mango cake.jpeg", tags: ["Signature"],
@@ -147,13 +147,13 @@ const menuItems = [
         // Cookies
     { id: 51, name: "Wheat chcochips cookies", category: "Cookies", desc: "The goodness of whole wheat meets natural jaggery sweetness and indulgent chocolate chips in every bite", weight: "100gm (8 pcs)", price: 180, image: "assets/Wheat chcochips cookies.png", tags: ["Bestseller"] },
     { id: 52, name: "Ragi Choco almond cookies", category: "Cookies", desc: "Rich in flavor and texture, these ragi cookies bring together nutty almonds and chocolatey goodness.", weight: "100gm (8 pcs)", price: 180, image: "assets/Ragi Choco Almond cookies.png", tags: ["Nutty", "Rich Chocolate"] },
-    { id: 53, name: "Ragi Cookies", category: "Cookies", desc: "Lightly crisp and naturally wholesome, perfect for everyday healthy indulgence.", weight: "100gm (8 pcs)", price: 180, image: "assets/Ragi cookies.png", tags: ["Vegan Friendly"] },
-    { id: 54, name: "Ragi Oats Cookies", category: "Cookies", desc: "Nutritious ragi and fiber-rich oats come together in a cookie that's both satisfying and delicious.", weight: "100gm (8 pcs)", price: 180, image: "assets/Ragi Oats Cookies.png", tags: ["Vegan Friendly"] },
-    { id: 55, name: "Ragi Flaxseed oats cookies", category: "Cookies", desc: "Crafted with ragi, oats, and flaxseeds for a satisfying snack that supports mindful eating", weight: "100gm (8 pcs)", price: 180, image: "assets/Ragi Flaxseed oats cookies.png", tags: ["Vegan Friendly"] },
+    { id: 53, name: "Ragi Cookies", category: "Cookies", desc: "Lightly crisp and naturally wholesome, perfect for everyday healthy indulgence.", weight: "100gm (8 pcs)", price: 180, image: "assets/Ragi cookies.png", tags: [] },
+    { id: 54, name: "Ragi Oats Cookies", category: "Cookies", desc: "Nutritious ragi and fiber-rich oats come together in a cookie that's both satisfying and delicious.", weight: "100gm (8 pcs)", price: 180, image: "assets/Ragi Oats Cookies.png", tags: [] },
+    { id: 55, name: "Ragi Flaxseed oats cookies", category: "Cookies", desc: "Crafted with ragi, oats, and flaxseeds for a satisfying snack that supports mindful eating", weight: "100gm (8 pcs)", price: 180, image: "assets/Ragi Flaxseed oats cookies.png", tags: [] },
     { id: 56, name: "Oats chochips cookies", category: "Cookies", desc: "Comforting, delicious, and loaded with choco chips—an everyday favorite for all ages.", weight: "100gm (8 pcs)", price: 180, image: "assets/Oats chochips cookies.png", tags: ["Bestseller"] },
     { id: 57, name: "Oats almond Cookies", category: "Cookies", desc: "Rich in flavor and texture, these cookies make a delightful tea-time companion.", weight: "100gm (8 pcs)", price: 180, image: "assets/Oats almond cookies.png", tags: ["Nutty"] },
     { id: 58, name: "Red velvet cookies", category: "Cookies", desc: "Soft, rich, and irresistibly indulgent, these red velvet cookies offer a touch of luxury in every bite.", weight: "100gm (8 pcs)", price: 180, image: "assets/Redvelvet cookies.png", tags: ["Signature"] },
-    { id: 59, name: "Multigrain cookies", category: "Cookies", desc: "Packed with the goodness of multiple grains, these cookies are perfect for mindful snacking.", weight: "100gm (8 pcs)", price: 200, image: "assets/Multigrain cookies.png", tags: ["Vegan Friendly"] },
+    { id: 59, name: "Multigrain cookies", category: "Cookies", desc: "Packed with the goodness of multiple grains, these cookies are perfect for mindful snacking.", weight: "100gm (8 pcs)", price: 200, image: "assets/Multigrain cookies.png", tags: [] },
     { id: 60, name: "Ginger Snap", category: "Cookies", desc: "Crisp and aromatic cookies infused with the warm, comforting flavor of ginger.", weight: "100gm (8 pcs)", price: 180, image: "assets/Ginger Snap.png", tags: ["Signature"] },
     { id: 61, name: "Nutty Mutty Cookies", category: "Cookies", desc: "A delightful medley of premium nuts baked into rich, crunchy cookies bursting with flavor.", weight: "100gm (8 pcs)", price: 180, image: "assets/Nutty mutty cookies.png", tags: ["Nutty"] }
 ];
@@ -168,7 +168,8 @@ const navbarHTML = `
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <a href="index.html" class="nav-logo">
-            <span class="accent-text">The</span> Bake Shop
+            <span class="nav-logo-text"><span class="accent-text">The</span> Bake Shop</span>
+            <img src="assets/mobile-logo.png" class="nav-logo-mobile" alt="The Bake Shop Logo">
         </a>
         
         <div class="nav-links" id="navLinks">
@@ -230,8 +231,8 @@ const footerHTML = `
             <div class="footer-col">
                 <h3>Contact Us</h3>
                 <p><i class="ph ph-user"></i> Latifa Shaikh</p>
-                <p><i class="ph ph-phone"></i> 9689327789</p>
-                <p><i class="ph ph-envelope"></i> order@thebakeshop.com</p>
+                <a href="https://wa.me/919689327789" target="_blank" style="text-decoration: none;"><i class="ph ph-phone"></i> 9689327789</a>
+                <a href="mailto:thebakeshopofficial@gmail.com?subject=New%20Order%20Inquiry" style="text-decoration: none;"><i class="ph ph-envelope"></i> thebakeshopofficial@gmail.com</a>
             </div>
         </div>
         
@@ -440,11 +441,13 @@ window.nextSlide = function(sliderId, direction) {
 
 // --- Theme Management ---
 function initTheme() {
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
+    let currentTheme = localStorage.getItem('theme');
+    if (!currentTheme) {
+        currentTheme = 'dark';
+        localStorage.setItem('theme', 'dark');
     }
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
 }
 
 function updateThemeIcon(theme) {
@@ -461,7 +464,7 @@ function updateThemeIcon(theme) {
 function setupEventListeners() {
     // Theme Toggle
     themeToggle.addEventListener('click', () => {
-        let theme = document.documentElement.getAttribute('data-theme');
+        let theme = document.documentElement.getAttribute('data-theme') || 'dark';
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
