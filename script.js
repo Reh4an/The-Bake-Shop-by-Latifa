@@ -182,13 +182,13 @@ const menuItems = [
 
     // Bento Cakes
     { id: 120, name: "Chocolate Ganache Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with rich chocolate ganache.", weight: "1 Piece", price: 350, image: "assets/bento_chocolate_ganache_1789223867333.jpg", tags: ["Bento"] },
-    { id: 121, name: "Dutch Chocolate Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with intense Dutch chocolate.", weight: "1 Piece", price: 400, image: "assets/bento_dutch_chocolate_1789224031455.jpg", tags: ["Bento"] },
+    { id: 121, name: "Dutch Chocolate Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with intense Dutch chocolate.", weight: "1 Piece", price: 400, image: "assets/bento_dutch_chocolate_real.jpg", tags: ["Bento"] },
     { id: 124, name: "Vanilla Buttercream Bento Cake", category: "Bento Cakes", desc: "Miniature vanilla bento cake with vanilla buttercream.", weight: "1 Piece", price: 300, image: "assets/bento_vanilla_whipped_cream.jpg", tags: ["Bento"] },
     { id: 125, name: "Red Velvet Buttercream Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with red velvet and buttercream.", weight: "1 Piece", price: 350, image: "assets/bento_red_velvet_buttercream_1789224178001.jpg", tags: ["Bento"] },
     { id: 126, name: "Red Velvet Cream Cheese Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with red velvet and cream cheese.", weight: "1 Piece", price: 400, image: "assets/bento_red_velvet_creamcheese_1789224195319.jpg", tags: ["Bento"] },
-    { id: 127, name: "Pineapple Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with fresh pineapple.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
-    { id: 128, name: "Strawberry Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with sweet strawberry.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
-    { id: 129, name: "Mango Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with seasonal mango.", weight: "1 Piece", price: 400, image: "assets/mobile-logo.png", tags: ["Bento", "Seasonal"] }
+    { id: 127, name: "Pineapple Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with fresh pineapple.", weight: "1 Piece", price: 350, image: "assets/bento_pineapple_real.jpg", tags: ["Bento"] },
+    { id: 128, name: "Strawberry Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with sweet strawberry.", weight: "1 Piece", price: 350, image: "assets/bento_strawberry_real.jpg", tags: ["Bento"] },
+    { id: 129, name: "Mango Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with seasonal mango.", weight: "1 Piece", price: 400, image: "assets/bento_mango_real.jpg", tags: ["Bento", "Seasonal"] }
 ];
 
 // --- Load GSAP ---
