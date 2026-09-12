@@ -1673,3 +1673,5 @@ section {
     margin: 0 auto;
     padding: 0 5%;
 }
+
+.tag-seasonal { background: #ff9800; color: white; border: none; }
