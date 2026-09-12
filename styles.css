@@ -722,6 +722,8 @@ section {
 .tag-premium { background: linear-gradient(135deg, #111, #000); color: #e5c158; border: 1px solid #e5c158; }
 .tag-nutty { background: #795548; color: white; border: none; }
 .tag-vegan-friendly { background: #2e7d32; color: white; border: none; }
+.tag-seasonal { background: #ff9800; color: white; border: none; }
+.tag-bento { background: #333; color: white; border: none; }
 
 .menu-item:hover .menu-item-image img {
   transform: scale(1.05);
