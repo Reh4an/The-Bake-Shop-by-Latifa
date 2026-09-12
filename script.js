@@ -69,7 +69,7 @@ const menuItems = [
     
     // Cupcake Delights
     { id: 19, name: "Buttercream Bliss Cupcake", category: "Cupcakes", desc: "Soft sponge topped with silky smooth buttercream.", weight: "MOQ 12 pcs", price: 30, image: "assets/Buttercream Cupcake.png", tags: ["Signature"] },
-    { id: 20, name: "Vanilla Choco Chip Cupcake", category: "Cupcakes", desc: "Classic vanilla studded with rich choco chips.", weight: "MOQ 12 pcs", price: 30, image: "assets/vanilla_choco_bare.png", tags: ["Bestseller"] },
+    { id: 20, name: "Vanilla Choco Chip Cupcake", category: "Cupcakes", desc: "Classic vanilla studded with Belgian choco chips.", weight: "MOQ 12 pcs", price: 30, image: "assets/vanilla_choco_bare.png", tags: ["Bestseller"] },
     { id: 21, name: "Pineapple Paradise Cupcake", category: "Cupcakes", desc: "A fluffy pineapple-infused cupcake finished with smooth whipped cream.", weight: "MOQ 12 pcs", price: 30, image: "assets/Pineapple Cupcake.png", tags: ["Fresh Fruit"] },
     { id: 22, name: "Butterscotch Dream Cupcake", category: "Cupcakes", desc: "Classic butterscotch indulgence in every bite.", weight: "MOQ 12 pcs", price: 30, image: "assets/Butterscotch Cupcake.png", tags: ["Bestseller"] },
     { id: 23, name: "Red Velvet Buttercream Cupcake", category: "Cupcakes", desc: "Classic red velvet cupcake topped with smooth, velvety buttercream frosting.", weight: "MOQ 12 pcs", price: 45, image: "assets/Red Velvet Cupcake (buttercream).png", tags: ["Signature"] },
@@ -125,10 +125,10 @@ const menuItems = [
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 600 }, { name: "1kg", price: 1100 }] },
     { id: 40, name: "Blueberry Velvet Dream", category: "Creamy Cakes", desc: "Beautifully decorated cake infused with blueberry essence and whipped cream.", weight: "1/2 kg", price: 700, image: "assets/Blue berry whipped cream cake.jpeg", tags: ["Fresh Fruit"],
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 700 }, { name: "1kg", price: 1300 }] },
-    { id: 43, name: "Royal Rasmalai Fusion", category: "Creamy Cakes", desc: "A rich fusion of indian rasmalai, whipped cream and cake.", weight: "1/2 kg", price: 800, image: "assets/rasmalai cake.jpeg", tags: ["Signature", "Premium"],
-      hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 800 }, { name: "1kg", price: 1500 }] },
     { id: 41, name: "Strawberry Bloom Cake", category: "Creamy Cakes", desc: "A pink-hued strawberry cake kissed with soft whipped cream.", weight: "1/2 kg", price: 600, image: "assets/Strawberry whipped cream cake.jpeg", tags: ["Fresh Fruit"],
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 600 }, { name: "1kg", price: 1100 }] },
+    { id: 43, name: "Royal Rasmalai Fusion", category: "Creamy Cakes", desc: "A rich fusion of indian rasmalai, whipped cream and cake.", weight: "1/2 kg", price: 800, image: "assets/rasmalai cake.jpeg", tags: ["Signature", "Premium"],
+      hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 800 }, { name: "1kg", price: 1500 }] },
     { id: 42, name: "Pineapple Paradise", category: "Creamy Cakes", desc: "Tropical goodness loaded with fresh pineapple chunks and smooth whipped cream.", weight: "1/2 kg", price: 650, image: "assets/pineapple cake.jpeg", tags: ["Fresh Fruit", "Signature"],
       hasOptions: true, customDecorNote: true, options: [{ name: "1/2 kg", price: 650 }, { name: "1kg", price: 1200 }] },
     { id: 44, name: "Mango Delight", category: "Creamy Cakes", desc: "A rich fusion of classic Indian mangoes, whipped cream and cake.", weight: "1/2 kg", price: 800, image: "assets/mango cake.jpeg", tags: ["Signature"],
@@ -155,7 +155,42 @@ const menuItems = [
     { id: 58, name: "Red velvet cookies", category: "Cookies", desc: "Soft, rich, and irresistibly indulgent, these red velvet cookies offer a touch of luxury in every bite.", weight: "100gm (8 pcs)", price: 180, image: "assets/Redvelvet cookies.png", tags: ["Signature"] },
     { id: 59, name: "Multigrain cookies", category: "Cookies", desc: "Packed with the goodness of multiple grains, these cookies are perfect for mindful snacking.", weight: "100gm (8 pcs)", price: 200, image: "assets/Multigrain cookies.png", tags: [] },
     { id: 60, name: "Ginger Snap", category: "Cookies", desc: "Crisp and aromatic cookies infused with the warm, comforting flavor of ginger.", weight: "100gm (8 pcs)", price: 180, image: "assets/Ginger Snap.png", tags: ["Signature"] },
-    { id: 61, name: "Nutty Mutty Cookies", category: "Cookies", desc: "A delightful medley of premium nuts baked into rich, crunchy cookies bursting with flavor.", weight: "100gm (8 pcs)", price: 180, image: "assets/Nutty mutty cookies.png", tags: ["Nutty"] }
+    { id: 61, name: "Nutty Mutty Cookies", category: "Cookies", desc: "A delightful medley of premium nuts baked into rich, crunchy cookies bursting with flavor.", weight: "100gm (8 pcs)", price: 180, image: "assets/Nutty mutty cookies.png", tags: ["Nutty"] },
+
+    // Pastries
+    { id: 101, name: "Bite Sized Chocolate Pastry", category: "Pastries", desc: "Delicious bite-sized chocolate pastry.", weight: "Options Available", price: 40, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 40 }, { name: "Box of 10", price: 350 }] },
+    { id: 102, name: "Bite Sized Dutch Chocolate Pastry", category: "Pastries", desc: "Rich bite-sized Dutch chocolate pastry.", weight: "Options Available", price: 50, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 50 }, { name: "Box of 10", price: 450 }] },
+    { id: 103, name: "Bite Sized Strawberry Pastry", category: "Pastries", desc: "Sweet bite-sized strawberry pastry.", weight: "Options Available", price: 45, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 45 }, { name: "Box of 10", price: 400 }] },
+    { id: 104, name: "Bite Sized Pineapple Pastry", category: "Pastries", desc: "Tropical bite-sized pineapple pastry.", weight: "Options Available", price: 40, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 40 }, { name: "Box of 10", price: 350 }] },
+    { id: 105, name: "Bite Sized Mango Pastry", category: "Pastries", desc: "Seasonal bite-sized mango pastry.", weight: "Options Available", price: 45, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 45 }, { name: "Box of 10", price: 400 }] },
+    
+    { id: 106, name: "Rectangular Regular Chocolate Pastry", category: "Pastries", desc: "Classic rectangular chocolate pastry.", weight: "Options Available", price: 60, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 60 }, { name: "Box of 4", price: 220 }] },
+    { id: 107, name: "Regular Dutch Chocolate Pastry", category: "Pastries", desc: "Classic rectangular Dutch chocolate pastry.", weight: "Options Available", price: 70, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 70 }, { name: "Box of 4", price: 250 }] },
+    { id: 108, name: "Regular Red Velvet Buttercream Pastry", category: "Pastries", desc: "Classic red velvet with buttercream.", weight: "Options Available", price: 60, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 60 }, { name: "Box of 4", price: 220 }] },
+    { id: 109, name: "Regular Red Velvet Cream Cheese Pastry", category: "Pastries", desc: "Classic red velvet with cream cheese.", weight: "Options Available", price: 70, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 70 }, { name: "Box of 4", price: 250 }] },
+    { id: 110, name: "Regular Strawberry Pastry", category: "Pastries", desc: "Classic rectangular strawberry pastry.", weight: "Options Available", price: 60, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 60 }, { name: "Box of 4", price: 220 }] },
+    { id: 111, name: "Regular Pineapple Pastry", category: "Pastries", desc: "Classic rectangular pineapple pastry.", weight: "Options Available", price: 60, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 60 }, { name: "Box of 4", price: 220 }] },
+    { id: 112, name: "Regular Mango Pastry", category: "Pastries", desc: "Classic rectangular mango pastry.", weight: "Options Available", price: 70, image: "assets/mobile-logo.png", tags: [], hasOptions: true, options: [{ name: "1 Piece", price: 70 }, { name: "Box of 4", price: 250 }] },
+
+    { id: 113, name: "Triangular Premium Chocolate Pastry", category: "Pastries", desc: "Premium triangular chocolate pastry.", weight: "Options Available", price: 80, image: "assets/mobile-logo.png", tags: ["Premium"], hasOptions: true, options: [{ name: "1 Piece", price: 80 }, { name: "Box of 4", price: 300 }] },
+    { id: 114, name: "Premium Dutch Chocolate Pastry", category: "Pastries", desc: "Premium triangular Dutch chocolate pastry.", weight: "Options Available", price: 85, image: "assets/mobile-logo.png", tags: ["Premium"], hasOptions: true, options: [{ name: "1 Piece", price: 85 }, { name: "Box of 4", price: 300 }] },
+    { id: 115, name: "Premium Red Velvet Buttercream Pastry", category: "Pastries", desc: "Premium red velvet with buttercream.", weight: "Options Available", price: 85, image: "assets/mobile-logo.png", tags: ["Premium"], hasOptions: true, options: [{ name: "1 Piece", price: 85 }, { name: "Box of 4", price: 300 }] },
+    { id: 116, name: "Premium Red Velvet Cream Cheese Pastry", category: "Pastries", desc: "Premium red velvet with cream cheese.", weight: "Options Available", price: 90, image: "assets/mobile-logo.png", tags: ["Premium"], hasOptions: true, options: [{ name: "1 Piece", price: 90 }, { name: "Box of 4", price: 350 }] },
+    { id: 117, name: "Premium Strawberry Pastry", category: "Pastries", desc: "Premium triangular strawberry pastry.", weight: "Options Available", price: 80, image: "assets/mobile-logo.png", tags: ["Premium"], hasOptions: true, options: [{ name: "1 Piece", price: 80 }, { name: "Box of 4", price: 300 }] },
+    { id: 118, name: "Premium Pineapple Pastry", category: "Pastries", desc: "Premium triangular pineapple pastry.", weight: "Options Available", price: 80, image: "assets/mobile-logo.png", tags: ["Premium"], hasOptions: true, options: [{ name: "1 Piece", price: 80 }, { name: "Box of 4", price: 300 }] },
+    { id: 119, name: "Premium Mango Pastry", category: "Pastries", desc: "Premium triangular mango pastry.", weight: "Options Available", price: 90, image: "assets/mobile-logo.png", tags: ["Premium"], hasOptions: true, options: [{ name: "1 Piece", price: 90 }, { name: "Box of 4", price: 400 }] },
+
+    // Bento Cakes
+    { id: 120, name: "Chocolate Ganache Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with rich chocolate ganache.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 121, name: "Dutch Chocolate Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with premium Dutch chocolate.", weight: "1 Piece", price: 400, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 122, name: "Vanilla Buttercream Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with classic vanilla buttercream.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 123, name: "Vanilla Whipped Cream Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with light vanilla whipped cream.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 124, name: "Red Velvet Whipped Cream Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with red velvet and whipped cream.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 125, name: "Red Velvet Buttercream Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with red velvet and buttercream.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 126, name: "Red Velvet Cream Cheese Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with red velvet and cream cheese.", weight: "1 Piece", price: 400, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 127, name: "Pineapple Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with fresh pineapple.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 128, name: "Strawberry Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with sweet strawberry.", weight: "1 Piece", price: 350, image: "assets/mobile-logo.png", tags: ["Bento"] },
+    { id: 129, name: "Mango Bento Cake", category: "Bento Cakes", desc: "Miniature bento cake with seasonal mango.", weight: "1 Piece", price: 400, image: "assets/mobile-logo.png", tags: ["Bento"] }
 ];
 
 // --- Load GSAP ---
@@ -231,8 +266,8 @@ const footerHTML = `
             <div class="footer-col">
                 <h3>Contact Us</h3>
                 <p><i class="ph ph-user"></i> Latifa Shaikh</p>
-                <a href="https://wa.me/919689327789" target="_blank" style="text-decoration: none;"><i class="ph ph-phone"></i> 9689327789</a>
-                <a href="mailto:thebakeshopofficial@gmail.com?subject=New%20Order%20Inquiry" style="text-decoration: none;"><i class="ph ph-envelope"></i> thebakeshopofficial@gmail.com</a>
+                <p><i class="ph ph-phone"></i> 9689327789</p>
+                <p><i class="ph ph-envelope"></i> order@thebakeshop.com</p>
             </div>
         </div>
         
@@ -441,13 +476,11 @@ window.nextSlide = function(sliderId, direction) {
 
 // --- Theme Management ---
 function initTheme() {
-    let currentTheme = localStorage.getItem('theme');
-    if (!currentTheme) {
-        currentTheme = 'dark';
-        localStorage.setItem('theme', 'dark');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
     }
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
 }
 
 function updateThemeIcon(theme) {
@@ -464,7 +497,7 @@ function updateThemeIcon(theme) {
 function setupEventListeners() {
     // Theme Toggle
     themeToggle.addEventListener('click', () => {
-        let theme = document.documentElement.getAttribute('data-theme') || 'dark';
+        let theme = document.documentElement.getAttribute('data-theme');
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
